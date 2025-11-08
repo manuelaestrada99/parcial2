@@ -1,78 +1,68 @@
-/* ======= 1. SUMA DE TRES VALORES =======
-Suma tres valores constantes definidos en el programa. */
-function sumarTresValores() {
-const a = 10, b = 15, c = 19; // Valores constantes
-const suma = a + b + c;
-document.getElementById("resultado1").textContent =
-`La suma de los valores constantes (${a}, ${b}, ${c}) es: ${suma}`;
+// 🔹 Suma de tres valores
+function sumarTres() {
+const n1 = parseFloat(document.getElementById("num1").value);
+const n2 = parseFloat(document.getElementById("num2").value);
+const n3 = parseFloat(document.getElementById("num3").value);
+const resultado = n1 + n2 + n3;
+document.getElementById("resultadoSuma").textContent =
+"La suma de los valores constantes es: " + resultado;
 }
 
-/* ======= 2. CUADRADO DE UN NÚMERO =======
-Calcula el cuadrado del número ingresado por el usuario. */
+// 🔹 Cuadrado de un número
 function calcularCuadrado() {
-const num = Number(document.getElementById("numeroCuadrado").value);
-if (isNaN(num)) {
-document.getElementById("resultado2").textContent = "Por favor, ingrese un número válido.";
-return;
-}
-const resultado = num ** 2;
-document.getElementById("resultado2").textContent =
-`El cuadrado de ${num} es: ${resultado}`;
+const num = parseFloat(document.getElementById("numCuadrado").value);
+const resultado = num * num;
+document.getElementById("resultadoCuadrado").textContent =
+"El cuadrado de " + num + " es: " + resultado;
 }
 
-/* ======= 3. PROMEDIO DE CALIFICACIONES =======
-Calcula el promedio de tres calificaciones de un estudiante. */
+// 🔹 Promedio de calificaciones
 function calcularPromedio() {
-const nombre = document.getElementById("nombreEstudiante").value.trim();
-const n1 = Number(document.getElementById("nota1").value);
-const n2 = Number(document.getElementById("nota2").value);
-const n3 = Number(document.getElementById("nota3").value);
-
-if (!nombre || isNaN(n1) || isNaN(n2) || isNaN(n3)) {
-document.getElementById("resultado3").textContent = "Complete todos los campos correctamente.";
-return;
-}
-
+const nombre = document.getElementById("nombre").value;
+const n1 = parseFloat(document.getElementById("nota1").value);
+const n2 = parseFloat(document.getElementById("nota2").value);
+const n3 = parseFloat(document.getElementById("nota3").value);
 const promedio = ((n1 + n2 + n3) / 3).toFixed(2);
-document.getElementById("resultado3").textContent =
-`El promedio de ${nombre} es: ${promedio} puntos.`;
+document.getElementById("resultadoPromedio").textContent =
+"El promedio de " + nombre + " es: " + promedio + " puntos";
 }
 
-/* ======= 4. CONVERSIÓN DE UNIDADES =======
-Convierte metros a centímetros y kilómetros. */
+// 🔹 Conversión de metros
 function convertirMetros() {
-const metros = Number(document.getElementById("metros").value);
-if (isNaN(metros)) {
-document.getElementById("resultado4").textContent = "Ingrese un valor válido en metros.";
-return;
-}
+const metros = parseFloat(document.getElementById("metros").value);
 const cm = metros * 100;
 const km = metros / 1000;
-document.getElementById("resultado4").textContent =
-`${metros} metros equivalen a ${cm} centímetros y ${km} kilómetros.`;
+document.getElementById("resultadoConversion").textContent =
+metros +
+" metros equivalen a " +
+cm +
+" centímetros y " +
+km +
+" kilómetros.";
 }
 
-/* ======= 5. COMPARACIÓN DE DOS VALORES =======
-Determina cuál número es mayor y muestra la diferencia. */
+// 🔹 Comparación de dos valores
 function compararValores() {
-const v1 = Number(document.getElementById("valor1").value);
-const v2 = Number(document.getElementById("valor2").value);
+const a = parseFloat(document.getElementById("valorA").value);
+const b = parseFloat(document.getElementById("valorB").value);
 
-if (isNaN(v1) || isNaN(v2)) {
-document.getElementById("resultado5").textContent = "Por favor, ingrese dos números válidos.";
+if (a === b) {
+document.getElementById("resultadoComparacion").textContent =
+"Los números no pueden ser iguales.";
 return;
 }
 
-if (v1 === v2) {
-document.getElementById("resultado5").textContent =
-"Los números no deben ser iguales.";
-return;
-}
+const mayor = a > b ? a : b;
+const menor = a < b ? a : b;
+const diferencia = Math.abs(a - b);
 
-const mayor = v1 > v2 ? v1 : v2;
-const menor = v1 > v2 ? v2 : v1;
-const diferencia = Math.abs(v1 - v2);
-document.getElementById("resultado5").textContent =
-`El número mayor es ${mayor}, el menor es ${menor}, y su diferencia es ${diferencia}.`;
+document.getElementById("resultadoComparacion").textContent =
+"El número mayor es " +
+mayor +
+", el menor es " +
+menor +
+", y su diferencia es " +
+diferencia +
+".";
 }
 
