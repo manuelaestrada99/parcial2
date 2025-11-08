@@ -8,21 +8,35 @@ min-height: 100vh;
 margin: 0;
 }
 
-.container {
+.calculator {
 background-color: white;
-border-radius: 15px;
-padding: 30px;
-box-shadow: 0 0 20px rgba(255, 140, 0, 0.3);
+border-radius: 20px;
+padding: 25px;
+box-shadow: 0 0 25px rgba(255, 136, 0, 0.3);
 width: 400px;
 }
 
 h1 {
 text-align: center;
 color: #ff7b00;
-margin-bottom: 25px;
+margin-bottom: 20px;
 }
 
-.card {
+/* Pantalla de resultados */
+.display {
+background-color: #222;
+color: #00ff88;
+font-size: 1.1rem;
+font-weight: bold;
+text-align: right;
+padding: 15px;
+border-radius: 10px;
+margin-bottom: 25px;
+box-shadow: inset 0 0 10px rgba(255, 136, 0, 0.3);
+}
+
+/* Secciones de funciones */
+.section {
 background-color: #fff3e0;
 border: 1px solid #ffa94d;
 border-radius: 10px;
@@ -30,9 +44,10 @@ padding: 15px;
 margin-bottom: 20px;
 }
 
-.card h2 {
+.section h2 {
 color: #ff7b00;
 font-size: 1.1em;
+margin-bottom: 10px;
 }
 
 input {
@@ -41,9 +56,10 @@ padding: 8px;
 margin: 5px 3px;
 border-radius: 5px;
 border: 1px solid #ffa94d;
+background-color: #fffdf9;
 }
 
-.card input[type="text"] {
+.section input[type="text"] {
 width: calc(100% - 10px);
 }
 
@@ -64,10 +80,12 @@ button:hover {
 background-color: #e67300;
 }
 
-p {
-color: #444;
-font-weight: 600;
-margin-top: 10px;
-text-align: center;
+.clear {
+background-color: #333;
+margin-top: 20px;
+}
+
+.clear:hover {
+background-color: #000;
 }
 
