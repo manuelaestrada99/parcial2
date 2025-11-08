@@ -1,1 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora Científica </title>
+<!-- Enlace al archivo CSS -->
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<h1>🧮 Calculadora Científica </h1>
 
+<div class="container">
+<!-- ======= 1. SUMA DE TRES VALORES ======= -->
+<h2>1. Suma de tres valores</h2>
+<button onclick="sumarTresValores()">Calcular suma</button>
+<div id="resultado1" class="resultado"></div>
+
+<!-- ======= 2. CUADRADO DE UN NÚMERO ======= -->
+<h2>2. Cuadrado de un número</h2>
+<label>Ingrese un número:</label>
+<input type="number" id="numeroCuadrado">
+<button onclick="calcularCuadrado()">Calcular cuadrado</button>
+<div id="resultado2" class="resultado"></div>
+
+<!-- ======= 3. PROMEDIO DE CALIFICACIONES ======= -->
+<h2>3. Promedio de calificaciones</h2>
+<label>Nombre del estudiante:</label>
+<input type="text" id="nombreEstudiante">
+<label>Calificación 1:</label>
+<input type="number" id="nota1">
+<label>Calificación 2:</label>
+<input type="number" id="nota2">
+<label>Calificación 3:</label>
+<input type="number" id="nota3">
+<button onclick="calcularPromedio()">Calcular promedio</button>
+<div id="resultado3" class="resultado"></div>
+
+<!-- ======= 4. CONVERSIÓN DE UNIDADES ======= -->
+<h2>4. Conversión de unidades (metros)</h2>
+<label>Ingrese valor en metros:</label>
+<input type="number" id="metros">
+<button onclick="convertirMetros()">Convertir</button>
+<div id="resultado4" class="resultado"></div>
+
+<!-- ======= 5. COMPARACIÓN DE DOS VALORES ======= -->
+<h2>5. Comparación de dos valores</h2>
+<label>Primer número:</label>
+<input type="number" id="valor1">
+<label>Segundo número:</label>
+<input type="number" id="valor2">
+<button onclick="compararValores()">Comparar</button>
+<div id="resultado5" class="resultado"></div>
+</div>
+
+<!-- Enlace al archivo JavaScript -->
+<script src="js/script.js"></script>
+</body>
+</html>
